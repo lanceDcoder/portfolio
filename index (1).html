@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Osawaru — Web Developer & UI/UX Designer</title>
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Google Fonts — Syne display + DM Sans body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+
+ 
+</head>
+<body>
+
+<!-- WebGL Background Canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrap">
+
+  <!-- ── NAV ── -->
+  <nav id="main-nav">
+    <a href="#hero" class="nav-logo">LANCER<span></span></a>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">
+      Hire Me
+      <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left -->
+        <div>
+          <div class="hero-badge reveal">
+            <iconify-icon icon="solar:shield-check-linear" width="14"></iconify-icon>
+            Available for new projects
+          </div>
+          <h1 class="hero-title reveal">
+            Building the<br/><span class="accent">web</span> you<br/>imagine.
+          </h1>
+          <p class="hero-desc reveal">
+            I'm Joshua Osawaru — a frontend web developer and UI/UX designer crafting clean, performant interfaces that convert visitors into clients.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn-primary">
+              View my work
+              <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+            </a>
+            <a href="#contact" class="btn-dark">Let's talk</a>
+          </div>
+        </div>
+        <!-- Right — code card -->
+        <div class="hero-card-wrap reveal">
+          <div class="hero-card glass">
+            <div class="hero-card-header">
+              <div class="hero-card-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="hero-card-tag">profile.json</span>
+            </div>
+            <div class="hero-card-body">
+              <span class="code-line"><span class="code-brace">{</span></span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"name"</span>: <span class="code-str">"Joshua E. Osawaru"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"role"</span>: <span class="code-str">"Frontend Developer"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"skills"</span>: [</span>
+              <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"HTML"</span>, <span class="code-str">"CSS"</span>, <span class="code-str">"JavaScript"</span></span>
+              <span class="code-line">&nbsp;&nbsp;],</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"design"</span>: <span class="code-str">"UI/UX"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"experience"</span>: <span class="code-num">1</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"available"</span>: <span class="code-bool">true</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-key">"location"</span>: <span class="code-str">"Rivers state, NG"</span></span>
+              <span class="code-line"><span class="code-brace">}</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-item reveal">
+          <div class="stat-num">20<span class="accent">+</span></div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">1<span class="accent">+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">100<span class="accent">%</span></div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal">
+        <iconify-icon icon="solar:layers-minimalistic-linear" width="14"></iconify-icon>
+        What I bring
+      </div>
+      <h2 class="section-title reveal">Core skills &amp; tools</h2>
+      <p class="section-sub reveal">From pixel-perfect layouts to interactive experiences — I build with precision and ship with care.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:cpu-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">HTML</div>
+          <div class="skill-desc">Semantic, accessible markup that search engines and screen readers love.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:tuning-square-2-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">CSS &amp; Design</div>
+          <div class="skill-desc">Responsive layouts, animations, glassmorphism, and modern visual systems.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:shield-check-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-desc"> Javascript for interactivity, DOM manipulation, APIs, and dynamic UIs.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:layers-minimalistic-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">UI/UX Design</div>
+          <div class="skill-desc">Figma-based wireframing, prototyping, and user-centred design flows.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:cpu-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">Responsive Web</div>
+          <div class="skill-desc">Mobile-first builds that look sharp on every screen size and device.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-icon">
+            <iconify-icon icon="solar:arrow-right-linear" width="20" style="color:#818CF8"></iconify-icon>
+          </div>
+          <div class="skill-name">Performance &amp; Deploy</div>
+          <div class="skill-desc">Git, Vercel, asset optimization, and clean deployment pipelines.</div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal">
+        <iconify-icon icon="solar:tuning-square-2-linear" width="14"></iconify-icon>
+        Selected work
+      </div>
+      <h2 class="section-title reveal">Projects I'm proud of</h2>
+      <p class="section-sub reveal">Real products built with real purpose. Each one solved a specific problem.</p>
+
+      <div class="projects-grid">
+
+        <!-- Featured -->
+        <div class="project-card glass featured reveal">
+          <div class="project-header">
+            <span class="project-tag">
+              <iconify-icon icon="solar:shield-check-linear" width="12"></iconify-icon>
+              Featured
+            </span>
+            <div class="project-arrow">
+              <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+            </div>
+          </div>
+          <div class="project-title">Foundation Faith Church</div>
+          <div class="project-desc">Full church website built and deployed to Vercel. Clean layout, responsive design, relative-path images and proper HTML structure for cross-platform compatibility.</div>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="project-card glass reveal">
+          <div class="project-header">
+            <span class="project-tag">Web App</span>
+            <div class="project-arrow">
+              <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+            </div>
+          </div>
+          <div class="project-title">Weather App</div>
+          <div class="project-desc">Real-time weather using Open-Meteo API with geocoding, forecast integration, and detailed error logging — no API key required.</div>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Open-Meteo</span><span>Fetch API</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="project-card glass reveal">
+          <div class="project-header">
+            <span class="project-tag">UI Component</span>
+            <div class="project-arrow">
+              <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+            </div>
+          </div>
+          <div class="project-title">Job Listings Filter</div>
+          <div class="project-desc">Category-based job filter UI using a custom JobFilter class with checkbox selection and real-time result highlighting.</div>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span> Javascript</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="project-card glass reveal">
+          <div class="project-header">
+            <span class="project-tag">Personal</span>
+            <div class="project-arrow">
+              <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+            </div>
+          </div>
+          <div class="project-title">Portfolio Web App</div>
+          <div class="project-desc">Personal showcase app with video background, email validation, mobile overflow fixes, persistent profile picture and glassmorphism aesthetic.</div>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Visual -->
+        <div class="about-visual reveal">
+          <div class="avatar-shell">
+            <div class="avatar-inner">
+              <div class="avatar-initials">LANCER</div>
+              <div class="avatar-title">Frontend Developer</div>
+            </div>
+          </div>
+          <div class="about-ping glass">
+            <div class="ping-dot"></div>
+            <span class="ping-text">Open to work</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content reveal">
+          <div class="section-label">
+            <iconify-icon icon="solar:layers-minimalistic-linear" width="14"></iconify-icon>
+            About me
+          </div>
+          <h2 class="section-title" style="font-size:36px; line-height:40px;">Joshua Edenene<br/>Osawaru</h2>
+          <div class="about-body">
+            <p>I'm a frontend web developer and UI/UX designer based in Rivers state, Nigeria. I work with startups, enterprises, and individual clients — turning ideas into interfaces that are both beautiful and functional.</p>
+            <p>My stack is HTML, CSS, and JavaScript. I deploy on Vercel, and care deeply about performance, accessibility, and the details most developers skip.</p>
+            <p>Recently enrolled in the 01edu piscine, expanding into Go — because great developers never stop learning.</p>
+          </div>
+          <div class="about-tags">
+            <span class="about-tag">HTML5</span>
+            <span class="about-tag">CSS</span>
+            <span class="about-tag">JavaScript</span>
+            
+            <span class="about-tag">UI/UX</span>
+            <span class="about-tag">Vercel</span>
+          
+            <span class="about-tag">Go (learning)</span>
+          </div>
+          <div style="margin-top:32px;">
+            <a href="https://github.com/lanceDcoder" target="_blank" class="btn-dark" style="display:inline-flex;">
+              GitHub — lancerDcoder
+              <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-label reveal">
+          <iconify-icon icon="solar:cpu-linear" width="14"></iconify-icon>
+          Get in touch
+        </div>
+        <h2 class="section-title reveal" style="font-size:42px; line-height:46px;">Let's build something<br/>great together.</h2>
+        <p class="section-sub reveal" style="margin:0 auto 0;">Have a project in mind? Reach out and let's talk about how I can help.</p>
+
+        <div class="contact-card glass reveal">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Your name</label>
+                <input class="form-input" type="text" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email address</label>
+                <input class="form-input" type="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input class="form-input" type="text" placeholder="Project inquiry" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send message
+              <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2025 Joshua Edenene Osawaru</span>
+    <div class="footer-links">
+      <a href="https://github.com/lancercoder" target="_blank">GitHub</a>
+      <a href="#contact">Contact</a>
+      <a href="#hero">Back to top</a>
+    </div>
+  </footer>
+
+</div><!-- end site-wrap -->
+
+<!-- ════════════════════════════════════
+     THREE.JS WebGL DOT-MATRIX BACKGROUND
+═══════════════════════════════════════ -->
+<script>
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas || typeof THREE === 'undefined') return;
+
+  /* Renderer */
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 0);
+
+  /* Scene + Camera */
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 200);
+  camera.position.z = 60;
+
+  /* Dot-matrix particle field */
+  const COLS = 80, ROWS = 50;
+  const COUNT = COLS * ROWS;
+  const positions = new Float32Array(COUNT * 3);
+  const colors    = new Float32Array(COUNT * 3);
+  const sizes     = new Float32Array(COUNT);
+
+  const spacingX = 1.6, spacingY = 1.3;
+  const colBase = new THREE.Color('#818CF8'); // indigo-400
+  const colDim  = new THREE.Color('#1e1b4b'); // very dark indigo
+
+  for (let i = 0; i < COUNT; i++) {
+    const col = i % COLS;
+    const row = Math.floor(i / COLS);
+    positions[i * 3]     = (col - COLS / 2) * spacingX;
+    positions[i * 3 + 1] = (row - ROWS / 2) * spacingY;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    const t = Math.random();
+    const c = colDim.clone().lerp(colBase, t * 0.35);
+    colors[i * 3]     = c.r;
+    colors[i * 3 + 1] = c.g;
+    colors[i * 3 + 2] = c.b;
+    sizes[i] = Math.random() * 1.5 + 0.5;
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color',    new THREE.BufferAttribute(colors,    3));
+  geo.setAttribute('size',     new THREE.BufferAttribute(sizes,     1));
+
+  /* Custom ShaderMaterial */
+  const mat = new THREE.ShaderMaterial({
+    uniforms: {
+      uTime:    { value: 0 },
+      uMouse:   { value: new THREE.Vector2(0, 0) },
+      uOpacity: { value: 0.55 },
+    },
+    vertexShader: `
+      attribute float size;
+      attribute vec3 color;
+      varying vec3 vColor;
+      varying float vDist;
+      uniform float uTime;
+      uniform vec2  uMouse;
+
+      void main(){
+        vColor = color;
+        vec3 pos = position;
+
+        // breathing pulse
+        float wave = sin(uTime * 0.5 + pos.x * 0.08 + pos.y * 0.06) * 0.5 + 0.5;
+        pos.z += wave * 1.2;
+
+        // pointer drift
+        float dx = pos.x * 0.02 - uMouse.x;
+        float dy = pos.y * 0.02 - uMouse.y;
+        float influence = 1.0 / (dx*dx + dy*dy + 1.0);
+        pos.x += uMouse.x * influence * 0.4;
+        pos.y += uMouse.y * influence * 0.4;
+
+        // depth fade
+        vDist = length(pos.xy) / 60.0;
+
+        vec4 mv = modelViewMatrix * vec4(pos, 1.0);
+        gl_PointSize = size * (60.0 / -mv.z) * (1.0 - vDist * 0.6);
+        gl_Position = projectionMatrix * mv;
+      }
+    `,
+    fragmentShader: `
+      varying vec3  vColor;
+      varying float vDist;
+      uniform float uOpacity;
+
+      void main(){
+        float d = length(gl_PointCoord - 0.5) * 2.0;
+        if(d > 1.0) discard;
+        float alpha = uOpacity * (1.0 - vDist * 0.8) * (1.0 - smoothstep(0.6, 1.0, d));
+        gl_FragColor = vec4(vColor, alpha);
+      }
+    `,
+    transparent: true,
+    vertexColors: true,
+    depthWrite: false,
+  });
+
+  const points = new THREE.Points(geo, mat);
+  scene.add(points);
+
+  /* Ambient lighting (not needed for ShaderMaterial but consistent with spec) */
+  scene.add(new THREE.AmbientLight(0x818CF8, 0.3));
+  const dir = new THREE.DirectionalLight(0xffffff, 0.4);
+  dir.position.set(10, 10, 10);
+  scene.add(dir);
+
+  /* Mouse */
+  const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+  window.addEventListener('mousemove', e => {
+    mouse.tx = (e.clientX / window.innerWidth  - 0.5) * 2;
+    mouse.ty = -(e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  /* Resize */
+  window.addEventListener('resize', () => {
+    const w = window.innerWidth, h = window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+
+  /* Animate */
+  let t = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    t += 0.008;
+    mouse.x += (mouse.tx - mouse.x) * 0.04;
+    mouse.y += (mouse.ty - mouse.y) * 0.04;
+    mat.uniforms.uTime.value  = t;
+    mat.uniforms.uMouse.value.set(mouse.x, mouse.y);
+    points.rotation.y = t * 0.008;
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+</script>
+
+<!-- ════════════════════════════════════
+     SCROLL REVEAL
+═══════════════════════════════════════ -->
+<script>
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, idx) => {
+      if (e.isIntersecting) {
+        const delay = (e.target.closest('.stats-row') || e.target.closest('.skills-grid') || e.target.closest('.projects-grid'))
+          ? Array.from(e.target.parentElement.children).indexOf(e.target) * 80
+          : 0;
+        setTimeout(() => {
+          e.target.classList.add('visible');
+          // animate skill bars
+          const bar = e.target.querySelector('.skill-bar-fill');
+          if (bar) {
+            setTimeout(() => {
+              bar.style.width = bar.dataset.width + '%';
+            }, 200);
+          }
+        }, delay);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(el => observer.observe(el));
+
+  // Hero entrance — stagger on load
+  const heroEls = document.querySelectorAll('#hero .reveal');
+  heroEls.forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 200 + i * 120);
+  });
+})();
+</script>
+
+<!-- ════════════════════════════════════
+     FORM SUBMIT
+═══════════════════════════════════════ -->
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = '✓ Message sent!';
+  btn.style.background = '#059669';
+  setTimeout(() => {
+    btn.innerHTML = 'Send message <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>';
+    btn.style.background = '';
+    e.target.reset();
+  }, 3000);
+}
+
+function toggleMenu() {
+  // Basic mobile menu toggle — can be extended
+  const links = document.querySelector('.nav-links');
+  if (!links) return;
+  if (links.style.display === 'flex') {
+    links.style.display = '';
+  } else {
+    links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(2,6,23,0.95);padding:20px 32px;gap:16px;border-bottom:1px solid rgba(255,255,255,0.08);';
+  }
+}
+</script>
+
+</body>
+</html>
